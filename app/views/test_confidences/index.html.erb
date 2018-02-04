@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Test Confidences</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Test</th>
+      <th>Test result</th>
+      <th>Confidence rating</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @test_confidences.each do |test_confidence| %>
+      <tr>
+        <td><%= test_confidence.test %></td>
+        <td><%= test_confidence.test_result %></td>
+        <td><%= test_confidence.confidence_rating %></td>
+        <td><%= link_to 'Show', test_confidence %></td>
+        <td><%= link_to 'Edit', edit_test_confidence_path(test_confidence) %></td>
+        <td><%= link_to 'Destroy', test_confidence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Test Confidence', new_test_confidence_path %>

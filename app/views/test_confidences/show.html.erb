@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Test:</strong>
+  <%= @test_confidence.test %>
+</p>
+
+<p>
+  <strong>Test result:</strong>
+  <%= @test_confidence.test_result %>
+</p>
+
+<p>
+  <strong>Confidence rating:</strong>
+  <%= @test_confidence.confidence_rating %>
+</p>
+
+<%= link_to 'Edit', edit_test_confidence_path(@test_confidence) %> |
+<%= link_to 'Back', test_confidences_path %>

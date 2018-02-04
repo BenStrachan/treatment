@@ -1,0 +1,2 @@
+class TestConclusion < ApplicationRecord
+end

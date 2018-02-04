@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Test:</strong>
+  <%= @test_conclusion.test %>
+</p>
+
+<p>
+  <strong>Diagnosis:</strong>
+  <%= @test_conclusion.diagnosis %>
+</p>
+
+<p>
+  <strong>Conclusion rating:</strong>
+  <%= @test_conclusion.conclusion_rating %>
+</p>
+
+<%= link_to 'Edit', edit_test_conclusion_path(@test_conclusion) %> |
+<%= link_to 'Back', test_conclusions_path %>

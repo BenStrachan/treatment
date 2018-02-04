@@ -1,0 +1,2 @@
+class TestConfidence < ApplicationRecord
+end
