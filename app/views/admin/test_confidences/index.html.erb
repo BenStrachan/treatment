@@ -1,0 +1,40 @@
+
+<div class="row">
+  <div class="col-md-6">
+    <h1>Test Confidence</h1>
+  </div>
+  <div class="col-md-6 text-right">
+    <a class="btn btn-outline-primary" href="<%= new_admin_test_confidence_path %>">New Test Confidence</a>
+  </div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Test</th>
+      <th>Test result</th>
+      <th>Confidence rating</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @test_confidences.each do |test_confidence| %>
+      <tr>
+        <td><%= test_confidence.test %></td>
+        <td><%= test_confidence.test_result %></td>
+        <td><%= test_confidence.confidence_rating %></td>
+        <td>
+          <a href="<%= edit_admin_test_confidence_path(test_confidence) %>" class="btn btn-outline-info">
+            Edit
+          </a>
+          <a href="<%= admin_test_confidence_path(test_confidence) %>" data-method="DELETE" class="btn btn-outline-danger"
+             data-confirm="Are you sure?">
+            Delete
+          </a>
+        </td>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
