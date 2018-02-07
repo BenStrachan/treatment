@@ -55,7 +55,7 @@
 
        # Never trust parameters from the scary internet, only allow the white list through.
        def test_params
-         params.require(:test).permit(:name, :description, :question, :result_type, :result_unit)
+         params.require(:test).permit(:name, :description, :result_type, :result_unit)
        end
    end
 
